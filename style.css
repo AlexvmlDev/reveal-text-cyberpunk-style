@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+/* Clean */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+div p {
+  width: 600px;
+}
+
+p {
+  color: #e6e9e9;
+  font-family: Source Code Pro,sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+p span {
+  position: relative;
+  white-space: pre;
+}
+
+/* Hide text with a background */
+span:after {
+    background-color: #e6e9e9;
+    content: " ";
+    height: 1em;
+    left: -2%;
+    position: absolute;
+    -webkit-transform: skewY(-15deg) rotate(15deg);
+    transform: skewY(-15deg) rotate(15deg);
+    width: 104%;
+}
+
+/* Show text when an active class is in it*/
+p span:after {
+    height: 1.2em;
+    transition: width 0s .3s;
+}
+
+p.active-class span:after {
+   transition: width .75s;
+   width: 0;
+}
+
+/* Button style */
+button {
+  display: block;
+  margin-top: 30px;
+  
+  color: #fcee0a;
+  background-color: rgba(0, 0, 0, 0);
+  border-image: url(https://www.cyberpunk.net/build/images/cp-btn-yellow-fd1ca428.svg) 0 20 fill;
+  min-width: 212px;
+  height: 48px;
+  border-style: solid;
+  border-width: 0 20px;
+}
+
+button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  border-image: url(https://www.cyberpunk.net/build/images/cp-btn-white-ade789cf.svg) 0 20 fill;
+  min-width: 212px;
+  height: 48px;
+  border-style: solid;
+  border-width: 0 20px;
+}
+
+button:active:after {
+  opacity: 1;
+  transition: 0s
+}
